@@ -137,7 +137,9 @@ def assignment_statistics(assignment_name, assignments, submissions):
     max_score = max(scores)
     avg_score = sum(scores) / len(scores)
 
-    return f"Min: {min_score}%\nAvg: {round(avg_score)}%\nMax: {max_score}%"
+    # Round the scores to the nearest integer for expected format
+    return f"Min: {round(min_score)}%\nAvg: {round(avg_score)}%\nMax: {round(max_score)}%"
+
 
 # Function to create a graph of assignment scores
 def assignment_graph(assignment_name, assignments, submissions):
